@@ -39,8 +39,10 @@ interface LeaderKeyConfig {
 	leader: string;
 	/** Timeout in ms before leader mode auto-cancels */
 	timeout: number;
-	/** Key → action mappings.  Prefixed with `/` = slash command; otherwise = keybinding id. */
+	/** Leader+key → action mappings.  Prefixed with `/` = slash command; otherwise = keybinding id. */
 	mappings: Record<string, string>;
+	/** Direct key → action mappings (no leader needed). Same format as mappings. */
+	shortcuts: Record<string, string>;
 }
 
 const CONFIG: LeaderKeyConfig = {
@@ -67,6 +69,10 @@ const CONFIG: LeaderKeyConfig = {
 		P: "app.model.cycleBackward",
 
 		u: "/rewind",
+	},
+	shortcuts: {
+		"alt+r": "/sandbox-enable",
+		"alt+e": "/sandbox-disable",
 	},
 };
 
@@ -127,6 +133,14 @@ class LeaderKeyEditor extends CustomEditor {
 			return;
 		}
 
+		// ── Direct shortcut (no leader) ──
+		for (const [key, action] of Object.entries(this.config.shortcuts)) {
+			if (matchesKey(data, key)) {
+				this.executeAction(action);
+				return;
+			}
+		}
+
 		// ── Normal typing ──
 		super.handleInput(data);
 	}
@@ -136,7 +150,6 @@ class LeaderKeyEditor extends CustomEditor {
 
 	private executeAction(action: string): void {
 		if (action.startsWith("/")) {
-			this.setText(action);
 			this.onSubmit?.(action);
 		} else {
 			this.executeHandler(action);

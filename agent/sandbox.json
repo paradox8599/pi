@@ -1,0 +1,40 @@
+{
+  "enabled": true,
+  "network": {
+    "allowedDomains": [
+      "*"
+    ],
+    "deniedDomains": []
+  },
+  "filesystem": {
+    "allowRead": [
+      ".",
+      "~",
+      "/tmp",
+      "/usr",
+      "/opt",
+      "/etc",
+      "/var"
+    ],
+    "allowWrite": [
+      "/tmp",
+      "~/.pi",
+      "~/.pi-lens",
+      "~/.cache"
+    ],
+    "denyWrite": [
+      ".env",
+      ".env.*",
+      "*.pem",
+      "*.key",
+      "*.secret",
+      "*token*",
+      "*credential*",
+      "*.p12",
+      "*.pfx",
+      ".git/config",
+      "auth.json",
+      "settings.json"
+    ]
+  }
+}

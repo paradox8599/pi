@@ -15,7 +15,8 @@
     "npm:pi-lens",
     "npm:@ff-labs/pi-fff",
     "npm:@gotgenes/pi-permission-system",
-    "npm:cc-safety-net"
+    "npm:cc-safety-net",
+    "npm:pi-sandbox"
   ],
   "images": {
     "blockImages": true
