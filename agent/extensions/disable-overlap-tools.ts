@@ -14,7 +14,7 @@
 
 import type { ExtensionAPI } from "@earendil-works/pi-coding-agent";
 
-const REMOVED = new Set(["grep", "find", "hypa_grep", "hypa_find"]);
+const REMOVED = new Set(["grep", "find"]);
 
 export default function (pi: ExtensionAPI): void {
 	pi.on("session_start", async () => {

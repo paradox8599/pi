@@ -12,6 +12,10 @@ agent/git/
 # Checkpoints & cache
 agent/ayu/
 context-mode/
+.pi-subagents/
+
+# Runtime artifacts
+agent/run-history.jsonl
 
 # Project-level pi config (auto-generated)
 .pi/

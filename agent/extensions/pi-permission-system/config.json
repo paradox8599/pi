@@ -5,7 +5,6 @@
   "yoloMode": false,
   "permission": {
     "*": "allow",
-
     "path": {
       "*": "allow",
       "*.env": "deny",
@@ -15,9 +14,13 @@
       "*.pem": "deny",
       "*.key": "deny"
     },
-
     "bash": {
       "*": "ask",
+      "cd": "allow",
+      "fd": "allow",
+      "rg": "allow",
+      "find": "allow",
+      "grep": "allow",
       "rm -rf *": "deny",
       "rm -r *": "ask",
       "sudo *": "ask",
@@ -32,7 +35,6 @@
       "dd if=*": "ask",
       "mkfs.*": "deny",
       ":(){ :|:& };:": "deny",
-
       "ls *": "allow",
       "ls": "allow",
       "lsof": "allow",
@@ -40,8 +42,8 @@
       "whoami": "allow",
       "echo *": "allow",
       "cat *": "ask",
-      "head *": "ask",
-      "tail *": "ask",
+      "head *": "allow",
+      "tail *": "allow",
       "wc *": "allow",
       "file *": "allow",
       "which *": "allow",
@@ -49,9 +51,11 @@
       "uname *": "allow",
       "date": "allow",
       "env": "allow",
-      "printenv *": "allow"
+      "printenv *": "allow",
+      "git status *": "allow",
+      "git diff *": "allow",
+      "git stash list *": "allow"
     },
-
     "mcp": {
       "mcp_status": "allow",
       "mcp_list": "allow",
@@ -60,11 +64,9 @@
       "mcp_connect": "ask",
       "*": "ask"
     },
-
     "skill": {
       "*": "allow"
     },
-
     "external_directory": "allow"
   }
 }

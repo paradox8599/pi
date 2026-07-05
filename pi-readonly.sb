@@ -1,0 +1,12 @@
+(version 1)
+(allow default)
+(deny file-write*)
+; pi state directories
+(allow file-write* (subpath "/private/tmp"))
+(allow file-write* (subpath "/private/var/folders"))
+(allow file-write* (subpath "/Users/para/.pi"))
+(allow file-write* (subpath "/Users/para/.pi-lens"))
+(allow file-write* (subpath "/Users/para/.cache"))
+; TTY for interactive terminal
+(allow file-ioctl (regex #"^/dev/tty"))
+(allow file-write* (literal "/dev/null"))

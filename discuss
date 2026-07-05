@@ -1,0 +1,5 @@
+#!/bin/bash
+# Launch pi in read-only discuss mode (OS-level sandbox, no file writes)
+exec sandbox-exec -f "$HOME/.pi/pi-readonly.sb" pi \
+  --append-system-prompt "OS-level sandbox active: writes blocked except ~/.pi and /tmp. Do not attempt to create, modify, or delete project files — they will fail with EPERM." \
+  "$@"

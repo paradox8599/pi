@@ -15,8 +15,7 @@
     "npm:pi-lens",
     "npm:@ff-labs/pi-fff",
     "npm:@gotgenes/pi-permission-system",
-    "npm:cc-safety-net",
-    "npm:@vahor/pi-keymap"
+    "npm:cc-safety-net"
   ],
   "images": {
     "blockImages": true
