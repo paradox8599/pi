@@ -14,6 +14,10 @@ agent/ayu/
 context-mode/
 .pi-subagents/
 
+# MCP caches (auto-generated)
+agent/mcp-cache.json
+agent/mcp-npx-cache.json
+
 # Runtime artifacts
 agent/run-history.jsonl
 
