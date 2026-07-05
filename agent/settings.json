@@ -1,0 +1,40 @@
+{
+  "lastChangelogVersion": "0.80.3",
+  "theme": "dark",
+  "defaultProvider": "opencode-go",
+  "defaultModel": "deepseek-v4-pro",
+  "defaultThinkingLevel": "high",
+  "packages": [
+    "npm:context-mode",
+    "npm:pi-web-access",
+    "npm:pi-mcp-adapter",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-subagents",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:@ayulab/pi-rewind",
+    "npm:pi-lens",
+    "npm:@ff-labs/pi-fff",
+    "npm:@gotgenes/pi-permission-system",
+    "npm:cc-safety-net",
+    "npm:@vahor/pi-keymap"
+  ],
+  "images": {
+    "blockImages": true
+  },
+  "showHardwareCursor": true,
+  "editorPaddingX": 1,
+  "autocompleteMaxVisible": 7,
+  "terminal": {
+    "showTerminalProgress": true
+  },
+  "transport": "auto",
+  "collapseChangelog": true,
+  "defaultProjectTrust": "ask",
+  "doubleEscapeAction": "none",
+  "treeFilterMode": "default",
+  "hideThinkingBlock": false,
+  "enabledModels": [
+    "opencode-go/deepseek-v4-flash",
+    "opencode-go/deepseek-v4-pro"
+  ]
+}

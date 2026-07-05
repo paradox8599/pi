@@ -1,0 +1,18 @@
+# Sessions & logs
+agent/sessions/
+agent/extensions/pi-permission-system/logs/
+
+# Auth & secrets
+agent/auth.json
+
+# Installed packages & skills (managed by pi)
+agent/npm/
+agent/git/
+
+# Checkpoints & cache
+agent/ayu/
+context-mode/
+
+# Project-level pi config (auto-generated)
+.pi/
+agent/.pi/

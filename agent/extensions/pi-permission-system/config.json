@@ -1,0 +1,70 @@
+{
+  "$schema": "https://raw.githubusercontent.com/gotgenes/pi-permission-system/main/schemas/permissions.schema.json",
+  "debugLog": false,
+  "permissionReviewLog": true,
+  "yoloMode": false,
+  "permission": {
+    "*": "allow",
+
+    "path": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "*.env.example": "allow",
+      "~/.ssh/*": "deny",
+      "*.pem": "deny",
+      "*.key": "deny"
+    },
+
+    "bash": {
+      "*": "ask",
+      "rm -rf *": "deny",
+      "rm -r *": "ask",
+      "sudo *": "ask",
+      "curl * | bash": "deny",
+      "curl * | sh": "deny",
+      "curl * | zsh": "deny",
+      "wget * | bash": "deny",
+      "wget * | sh": "deny",
+      "wget * | zsh": "deny",
+      "chmod 777 *": "deny",
+      "> /dev/*": "deny",
+      "dd if=*": "ask",
+      "mkfs.*": "deny",
+      ":(){ :|:& };:": "deny",
+
+      "ls *": "allow",
+      "ls": "allow",
+      "lsof": "allow",
+      "pwd": "allow",
+      "whoami": "allow",
+      "echo *": "allow",
+      "cat *": "ask",
+      "head *": "ask",
+      "tail *": "ask",
+      "wc *": "allow",
+      "file *": "allow",
+      "which *": "allow",
+      "type *": "allow",
+      "uname *": "allow",
+      "date": "allow",
+      "env": "allow",
+      "printenv *": "allow"
+    },
+
+    "mcp": {
+      "mcp_status": "allow",
+      "mcp_list": "allow",
+      "mcp_search": "allow",
+      "mcp_describe": "allow",
+      "mcp_connect": "ask",
+      "*": "ask"
+    },
+
+    "skill": {
+      "*": "allow"
+    },
+
+    "external_directory": "allow"
+  }
+}
