@@ -1,8 +1,8 @@
 {
-  "lastChangelogVersion": "0.80.3",
+  "lastChangelogVersion": "0.80.6",
   "theme": "dark",
   "defaultProvider": "opencode-go",
-  "defaultModel": "deepseek-v4-pro",
+  "defaultModel": "deepseek-v4-flash",
   "defaultThinkingLevel": "high",
   "packages": [
     "npm:context-mode",
@@ -16,7 +16,12 @@
     "npm:@ff-labs/pi-fff",
     "npm:@gotgenes/pi-permission-system",
     "npm:cc-safety-net",
-    "npm:pi-sandbox"
+    "npm:pi-sandbox",
+    "npm:@pi-vault/pi-dcp",
+    "git:github.com/obra/superpowers",
+    "npm:@romansix/pi-tmux",
+    "npm:pi-tmux-task",
+    "npm:alps-pi"
   ],
   "images": {
     "blockImages": true
@@ -35,6 +40,45 @@
   "hideThinkingBlock": false,
   "enabledModels": [
     "opencode-go/deepseek-v4-flash",
-    "opencode-go/deepseek-v4-pro"
-  ]
+    "opencode-go/deepseek-v4-pro",
+    "LiftAI/claude-fable-5",
+    "opencode-go/glm-5.2"
+  ],
+  "alps-pi": {
+    "chromeFrame": {
+      "enabled": true,
+      "assistantFrame": true,
+      "toolCompactMode": true,
+      "compactEditTool": false
+    },
+    "fixedBottomEditor": {
+      "enabled": true
+    },
+    "beautifiedInput": {
+      "enabled": true
+    },
+    "animations": {
+      "enabled": true,
+      "randomMode": false,
+      "working": "crush",
+      "thinking": "shimmer",
+      "tool": "pipeline",
+      "width": "default",
+      "fps": 16
+    },
+    "shortcuts": {
+      "stashEditor": "alt+s",
+      "copyEditor": "ctrl+shift+c",
+      "cutEditor": "ctrl+shift+x",
+      "scrollChatUp": "super+up",
+      "scrollChatDown": "super+down",
+      "editorStart": "super+shift+up",
+      "editorEnd": "super+shift+down",
+      "jumpPreviousUserMessage": "ctrl+shift+u",
+      "jumpNextUserMessage": "ctrl+shift+i",
+      "jumpPreviousAssistantMessage": "ctrl+alt+,",
+      "jumpNextAssistantMessage": "ctrl+alt+.",
+      "jumpChatBottom": "ctrl+shift+g"
+    }
+  }
 }
